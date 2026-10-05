@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Surat Undangan Organisasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container no-print">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1>Generator Surat Undangan Organisasi</h1>
+                <p>Buat banyak undangan otomatis, aman di browser Anda tanpa server.</p>
+            </div>
+        </header>
+
+        <!-- Stepper Navigation -->
+        <div class="stepper">
+            <div class="step active" id="step1-nav">
+                <div class="step-circle">1</div>
+                <div class="step-label">Detail Surat</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" id="step2-nav">
+                <div class="step-circle">2</div>
+                <div class="step-label">Daftar Penerima</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" id="step3-nav">
+                <div class="step-circle">3</div>
+                <div class="step-label">Pratinjau & Unduh</div>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <!-- Step 1: Detail Surat -->
+            <section id="step1" class="step-content active">
+                <div class="panel-layout">
+                    <div class="form-panel">
+                        <h2>Pengaturan Detail Surat</h2>
+                        
+                        <div class="form-section">
+                            <h3>Kop Surat</h3>
+                            <div class="form-group">
+                                <label>Logo (Gambar)</label>
+                                <input type="file" id="logoInput" accept="image/*">
+                            </div>
+                            <div class="form-group">
+                                <label>Baris 1 (Tebal, Kapital)</label>
+                                <input type="text" id="kop1" value="UNIT KEGIATAN MAHASISWA (UKM)">
+                            </div>
+                            <div class="form-group">
+                                <label>Baris 2 (Tebal, Kapital)</label>
+                                <input type="text" id="kop2" value="ENGLISH SPEAKING CLUB (ESC)">
+                            </div>
+                            <div class="form-group">
+                                <label>Baris 3 (Tebal, Kapital)</label>
+                                <input type="text" id="kop3" value="UNIVERSITAS HAMZANWADI">
+                            </div>
+                            <div class="form-group">
+                                <label>Baris 4 (Kecil)</label>
+                                <input type="text" id="kop4" value="Sekretariat Jl. Cut Nyak Dien Kampus I Lt. II Pancor Lotim HP: 081997661173">
+                            </div>
+                            <div class="form-group">
+                                <label>Baris 5 (Kecil)</label>
+                                <input type="text" id="kop5" value="IG: esc_hamzanwadi E-mail: hamzanwadies@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Identitas Surat</h3>
+                            <div class="form-group">
+                                <label>Nomor Surat</label>
+                                <input type="text" id="nomorSurat" value="02/ia/ESC/UH/IX/2026">
+                            </div>
+                            <div class="form-group">
+                                <label>Lampiran</label>
+                                <input type="text" id="lampiranSurat" value="-">
+                            </div>
+                            <div class="form-group">
+                                <label>Hal</label>
+                                <input type="text" id="halSurat" value="Undangan Pelantikan">
+                            </div>
+                            <div class="form-group">
+                                <label>Tempat ("di-")</label>
+                                <input type="text" id="tempatTujuan" value="tempat">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Acara & Tanggal</h3>
+                            <div class="form-group">
+                                <label>Nama Kegiatan</label>
+                                <input type="text" id="namaKegiatan" value="Pelantikan Pengurus Baru">
+                            </div>
+                            <div class="form-group">
+                                <label>Tema Kegiatan</label>
+                                <input type="text" id="temaKegiatan" value="Mewujudkan Sinergitas dan Totalitas Pengurus Baru yang Berkemajuan">
+                            </div>
+                            <div class="form-group">
+                                <label>Hari / Tanggal</label>
+                                <input type="text" id="waktuHariTanggal" value="Rabu, 16 September 2026">
+                            </div>
+                            <div class="form-group">
+                                <label>Waktu</label>
+                                <input type="text" id="waktuJam" value="08.00 Wita - Selesai">
+                            </div>
+                            <div class="form-group">
+                                <label>Tempat Acara</label>
+                                <input type="text" id="waktuTempat" value="Auditorium Universitas Hamzanwadi">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Tanda Tangan</h3>
+                            <div class="form-group">
+                                <label>Tempat, Tanggal Surat</label>
+                                <input type="text" id="tglSuratDibuat" value="Pancor, 15 September 2026">
+                            </div>
+                            <div class="signature-grid">
+                                <div>
+                                    <h4>Penandatangan Kiri</h4>
+                                    <div class="form-group">
+                                        <label>Jabatan</label>
+                                        <input type="text" id="ttd1Jabatan" value="Ketua Umum,">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nama</label>
+                                        <input type="text" id="ttd1Nama" value="PEBIAN ROZIKIN">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>NPM</label>
+                                        <input type="text" id="ttd1Npm" value="NPM.250202077">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Unggah Tanda Tangan (PNG)</label>
+                                        <input type="file" id="ttd1ImgInput" accept="image/*">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4>Penandatangan Kanan</h4>
+                                    <div class="form-group">
+                                        <label>Jabatan</label>
+                                        <input type="text" id="ttd2Jabatan" value="Sekretaris Umum,">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nama</label>
+                                        <input type="text" id="ttd2Nama" value="SEFTIN SYIFAATUL HAYATI">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>NPM</label>
+                                        <input type="text" id="ttd2Npm" value="NPM. 250102213">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Unggah Tanda Tangan (PNG)</label>
+                                        <input type="file" id="ttd2ImgInput" accept="image/*">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Unggah Stempel (PNG)</label>
+                                        <input type="file" id="stempelImgInput" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons space-between">
+                            <button id="resetFormBtn" class="btn btn-secondary">Reset Formulir</button>
+                            <button id="nextToStep2" class="btn btn-primary">Selanjutnya: Daftar Penerima &rarr;</button>
+                        </div>
+                    </div>
+
+                    <div class="preview-panel">
+                        <div class="preview-header">
+                            <h3>Pratinjau Surat</h3>
+                            <p class="preview-info">Pratinjau menggunakan nama default "NAMA PENERIMA".</p>
+                        </div>
+                        <div class="letter-container-wrapper">
+                            <!-- Template Surat akan dirender di sini -->
+                            <div id="livePreviewContainer" class="letter-page"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 2: Daftar Penerima -->
+            <section id="step2" class="step-content">
+                <div class="panel">
+                    <h2>Kelola Daftar Penerima</h2>
+                    <p>Masukkan daftar nama orang yang akan diundang. Satu baris mewakili satu surat.</p>
+                    
+                    <div class="import-options">
+                        <div class="import-card">
+                            <h3>Paste Teks Massal</h3>
+                            <textarea id="bulkTextInput" placeholder="Ketik atau paste nama di sini, satu nama per baris...&#10;Contoh:&#10;Kanda L. Wahyu Andi Purnama, S.Pd., M.Hum.&#10;Saudari Andi&#10;Bapak Budi"></textarea>
+                            <button id="addBulkTextBtn" class="btn btn-outline">Tambahkan ke Tabel</button>
+                        </div>
+                        
+                        <div class="import-card">
+                            <h3>Impor dari Excel / CSV</h3>
+                            <p>Kolom "nama" (huruf kecil) akan digunakan. <a href="#" id="downloadExcelSample">Unduh contoh template</a>.</p>
+                            <input type="file" id="excelFileInput" accept=".xlsx, .xls, .csv">
+                            <button id="importExcelBtn" class="btn btn-outline">Impor File</button>
+                        </div>
+                    </div>
+
+                    <div class="table-actions">
+                        <button id="addSingleRowBtn" class="btn btn-secondary">+ Tambah 1 Baris</button>
+                        <button id="clearAllRowsBtn" class="btn btn-danger">Hapus Semua</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table id="recipientTable">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Sapaan (Opsional)</th>
+                                    <th>Nama Penerima (Termasuk Gelar)</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recipientTbody">
+                                <!-- Data rows -->
+                            </tbody>
+                        </table>
+                        <div id="duplicateWarning" class="alert warning" style="display: none;">
+                            Ditemukan nama duplikat yang otomatis dihapus.
+                        </div>
+                        <div class="table-summary">Total Penerima: <span id="totalRecipients">0</span></div>
+                    </div>
+
+                    <div class="action-buttons space-between mt-4">
+                        <button id="backToStep1" class="btn btn-secondary">&larr; Kembali</button>
+                        <button id="nextToStep3" class="btn btn-primary">Selanjutnya: Pratinjau & Unduh &rarr;</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 3: Pratinjau & Unduh -->
+            <section id="step3" class="step-content">
+                <div class="panel-layout">
+                    <div class="form-panel sidebar">
+                        <h2>Ekspor & Unduh</h2>
+                        <div class="summary-box">
+                            <p>Siap untuk membuat <strong id="finalCount">0</strong> surat undangan.</p>
+                        </div>
+
+                        <div class="export-options">
+                            <button id="downloadPdfCombinedBtn" class="btn btn-primary block mb-3">Unduh 1 PDF (Semua Surat)</button>
+                            <button id="downloadZipBtn" class="btn btn-secondary block mb-3">Unduh ZIP (PDF Terpisah)</button>
+                            <button id="downloadWordBtn" class="btn btn-outline block mb-3">Unduh Word (.docx)</button>
+                            <button id="printBrowserBtn" class="btn btn-outline block">Cetak Langsung</button>
+                        </div>
+                        
+                        <div id="exportProgress" class="progress-container mt-4" style="display: none;">
+                            <p id="progressText">Memproses: 0%</p>
+                            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                        </div>
+
+                        <div class="action-buttons mt-5">
+                            <button id="backToStep2" class="btn btn-secondary block">&larr; Kembali ke Daftar Nama</button>
+                        </div>
+                    </div>
+
+                    <div class="preview-panel">
+                        <div class="preview-nav-header">
+                            <h3>Pratinjau Akhir</h3>
+                            <div class="preview-controls">
+                                <button id="prevPreviewBtn" class="btn btn-sm btn-secondary">&larr;</button>
+                                <span id="previewIndicator">Surat 1 dari 0</span>
+                                <button id="nextPreviewBtn" class="btn btn-sm btn-secondary">&rarr;</button>
+                            </div>
+                        </div>
+                        <div class="search-box mb-3">
+                            <input type="text" id="searchPreviewInput" placeholder="Cari nama...">
+                        </div>
+                        <div class="letter-container-wrapper">
+                            <div id="finalPreviewContainer" class="letter-page"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Cetak (Hanya terlihat saat diprint) -->
+    <div id="printArea" class="print-only"></div>
+
+    <!-- CDNs -->
+    <!-- SheetJS for Excel -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <!-- html2pdf for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- JSZip for ZIP creation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- FileSaver for downloading files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <!-- docx for Word generation -->
+    <script src="https://unpkg.com/docx@7.8.2/build/index.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/recipients.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
